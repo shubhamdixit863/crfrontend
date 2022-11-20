@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, useRef } from 'react';
-import Link from '../../utils/ActiveLink';
+import Link from 'next/link';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup'
@@ -176,15 +176,15 @@ const Navbar = () => {
 
                 <ul className='navbar-nav whitespace-nowrap !mr-0'>
                   <li className='nav-item !ml-5'>
-                    <a href='#' className=' nav-link' >
-                      Home
-                    </a>
+                    <Link href='/' className=' nav-link' >
+                    <a className='nav-link'>Home</a>                     
+                    </Link>
                   </li>
                   
                   <li className='nav-item'>
-                    <a href='#' className=' nav-link'>
-                      Listings
-                    </a>
+                    <Link href='/listings' className=' nav-link'>
+                    <a className='nav-link'>Listing</a>                   
+                   </Link>
                   </li>
                   
                   
