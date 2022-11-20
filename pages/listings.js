@@ -14,10 +14,16 @@ const GridListingsFullWidth = () => {
   const [page,setPage]=useState(0);
   const [limit,setLimit]=useState(9);
   const [pagination,setPagination]=useState([]);
+  const [search,setSearch]=useState("");
+  const [category,setCategory]=useState("");
+
+  const [location,setLocation]=useState("");
+
+  
 
   const getListings=()=>{
 
-    axios.get(`${process.env.NEXT_PUBLIC_API_URLBACKEND}/listing?page=${page}&limit=${limit}`).then(response=>{
+    axios.post(`${process.env.NEXT_PUBLIC_API_URLBACKEND}/listing/search`,{limit,page,search,category,location}).then(response=>{
        setState(response.data.data);
        const totalPages=response.data.data.total
        if (totalPages){
