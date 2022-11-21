@@ -75,7 +75,7 @@ const NavbarTwo = () => {
             <nav className="navbar navbar-expand-md navbar-light">
               <Link href="/index-2">
                 <a className="navbar-brand">
-                  <img src="/images/black-logo.png" alt="logo" />
+                  <img src="/images/consumerreviewslogo.png" alt="logo" />
                 </a>
               </Link>
               <div className="collapse navbar-collapse mean-menu">
