@@ -168,7 +168,7 @@ const Navbar = () => {
             <nav className='navbar navbar-expand-md navbar-light' >
               <Link href='/'>
                 <a className='navbar-brand !mr-0' style={{width:"19rem", height:"4vw"}}>
-                  <img src='/images/logo3.png' alt='logo' />
+                  <img src='/images/consumerreviews_logo_white.png' alt='logo' />
                 </a>
               </Link>
 
