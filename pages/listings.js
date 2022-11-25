@@ -89,7 +89,9 @@ const changePage=(page)=>{
 
           <div className='row'>
             {
-               state?.listing?.map(ele=>(
+               state?.listing?.map(ele=>{
+                let images = ele.files.split(',');
+                return(
                 <div className='col-xl-4 col-lg-6 col-md-6'>
                 <div className='single-listings-box'>
                   <div className='listings-image'>
@@ -99,10 +101,12 @@ const changePage=(page)=>{
                       modules={[Navigation]} 
                       className="listings-image-slides"
                     >
+                      { images.map(element=>{
+                         return(                      
                       <SwiperSlide>
                         <div className='single-image'>
                           <img
-                            src='/images/listings/listings2.jpg'
+                           src={element}
                             alt='image'
                           />
                           <Link href="/single-listings">
@@ -110,18 +114,8 @@ const changePage=(page)=>{
                           </Link>
                         </div>
                       </SwiperSlide>
-                      
-                      <SwiperSlide>
-                        <div className='single-image'>
-                          <img
-                            src='/images/listings/listings4.jpg'
-                            alt='image'
-                          />
-                          <Link href="/single-listings">
-                            <a className='link-btn'></a>
-                          </Link>
-                        </div>
-                      </SwiperSlide>
+                      )
+                     })}                      
                     </Swiper>
   
                     <a href='#' className='bookmark-save'>
@@ -178,7 +172,7 @@ const changePage=(page)=>{
                   </div>
                 </div>
               </div>
-               ))
+               )})
             }
            
 
